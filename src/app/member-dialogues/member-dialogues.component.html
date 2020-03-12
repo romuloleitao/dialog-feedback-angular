@@ -1,0 +1,12 @@
+<h2>Member Dialogues</h2>
+    <ul class="memberDialogues">
+        <li *ngFor="let memberDialogue of memberDialogues" fa-minus-circle>
+            <span class="badge" >Membre:</span> {{memberDialogue.memberName}}
+        </li>
+    </ul>
+
+<!-- <div>
+    <label>name:
+        <input [(ngModel)]="memberDialogue.memberName" placeholder="Member Name" />
+    </label>
+</div> -->
