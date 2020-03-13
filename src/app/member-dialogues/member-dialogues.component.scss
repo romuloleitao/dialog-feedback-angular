@@ -1,5 +1,5 @@
 /* MembresDialoguesComponent's private CSS styles */
-.memberDialogues {
+#memberDialogues {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
@@ -19,9 +19,10 @@
     color: #607D8B;
     background-color: #DDD;
     left: .1em;
+    padding: 0.8em 0.7em 0 0.7em;
   }
   .memberDialogues li.selected {
-    background-color: #CFD8DC;
+    background-color: blue;
     color: white;
   }
   .memberDialogues li.selected:hover {

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MemberDialogue } from '../memberDialogue';
-import { MEMBERDIALOGUES } from '../mock-member-dialogues';
+import { DataService } from '../mock-member-dialogues';
 
 @Component({
   selector: 'member-dialogues',
@@ -9,11 +8,17 @@ import { MEMBERDIALOGUES } from '../mock-member-dialogues';
 })
 export class MemberDialoguesComponent implements OnInit {
 
-  memberDialogues = MEMBERDIALOGUES;
+  memberDialogues;
+  selectedMemberDialogue;
 
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.memberDialogues = this.dataService.getMemberDialogs();
+  }
+
+  public selectMemberDialogue(memberDialogue) {
+    this.selectedMemberDialogue = memberDialogue;
   }
 
 }
